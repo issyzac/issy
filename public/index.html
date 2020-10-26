@@ -15,6 +15,22 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <link rel="icon" href="https://pro2-bar-s3-cdn-cf6.myportfolio.com/ac05157db7a7732302b941275878c68b/715b5fa9-9e57-4dc7-b02c-0185f111b02d_carw_1x1x32.png?h=d4cfe32395930636740cf11edd7cc05b" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/dist/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="https://pro2-bar-s3-cdn-cf1.myportfolio.com/ac05157db7a7732302b941275878c68b/201cfb5c42c2d7142b3628c49972f3401574116020.css?h=0a7e5bf9631a0dd2905baef6882ae544" type="text/css"/>
+    <link rel="canonical" href="works.html" />
+
+    <script type="text/javascript"
+    src="https://use.typekit.net/ik/_-WMmTtAEkPRv2sqiMNzI66IwYm0d8yIdGxIV-h4zKjfenjffHYEBsJzwD9oFDIDWh4KFRmqjhBcjDi8jR8KFRMoFcwUZ28KZRsyF26ojDqtjAboZAbajDw-RbI7OcuoSeNkieZzde8zOcFzdP37O1gkdDJlic88ikolpWgzS1scdhUTdkoRdhXCHKokdh48S1sC-AFyiPoRdhXCdW83da4XZcNC-Av0jhNlOYgkdDJlic88ikolpWgzS1scdhUTdkoRdhXCScNKZW4Xde8RjW90jhNlOYiaikokdh48S1sC-AFyiPoRdhXKgeilShGKgYsDjaqKgYZRShX7fbRs2UMMeMS6MKG4fFZlIMIjgPMfH6qJXcXbMs6YJMJ7fbRKHyMfeMw6MKG4fHvgIMJjgfMfH6qJnbIbMy6eJMJ7fbKOMsMfeMS6MKG4fHqgIMJjffMfqMehlJD7gb.js?cb=c39e815b85178010fb1aa1abdd329ebdfdfd193a"
+    async onload="
+      try {
+        window.Typekit.load();
+      } catch (e) {
+        console.warn('Typekit not loaded.');
+      }
+    "></script>
+
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -40,4 +56,38 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script type="text/javascript">
+    // fix for Safari's back/forward cache
+    window.onpageshow = function (e) {
+      if (e.persisted) { window.location.reload(); }
+    };
+  </script>
+  <script type="text/javascript">
+    var __config__ = { 
+      "page_id": "p57d7b965629b5dc13c97481a1e6d65d7ac8902ce7ca32320e79b6", 
+      "theme": { "name": "geometric" }, 
+      "pageTransition": true, 
+      "linkTransition": true, 
+      "disableDownload": true, 
+      "localizedValidationMessages": { 
+        "required": "This field is required", 
+        "Email": "This field must be a valid email address" 
+       }, 
+       "lightbox": { 
+         "enabled": false 
+        }, 
+        "cookie_banner": { 
+          "enabled": true, 
+          "color": { 
+            "text": "#1c1c1c", 
+            "bg": "#f7f7f7" 
+            } 
+          }, 
+          "googleAnalytics": { 
+            "trackingCode": "UA-87496201-1", 
+            "anonymization": false 
+          } 
+    };
+  </script>
+  <script type="text/javascript" src="%PUBLIC_URL%/dist/js/main.js@cb=c39e815b85178010fb1aa1abdd329ebdfdfd193a"></script>
 </html>
