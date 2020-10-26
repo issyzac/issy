@@ -1,4 +1,4 @@
-function Header(){
+function PageHeader(){
     return (
         <header class="site-header">
           <div class="logo-container">
@@ -41,4 +41,4 @@ function Header(){
     );
 }
 
-export default Header;
+export default PageHeader;
