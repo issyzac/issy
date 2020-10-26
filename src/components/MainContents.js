@@ -7,10 +7,11 @@ function MainContents(){
     return (
         <main>
             <TopDescription />
-            {/* <section className="project-covers js-site-wrap js-editable-target editable" data-context="page.gallery.covers">
+            <section className="project-covers js-site-wrap js-editable-target editable" 
+                data-context="page.gallery.covers">
                 <Project />
-            </section> */}
-            {/* <BackToTop /> */}
+            </section>
+            <BackToTop />
             <Footer />
         </main>
     );
