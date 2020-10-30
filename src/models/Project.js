@@ -1,0 +1,4 @@
+let ProjectModel = {
+    projectName: "",
+    tumbnailUrl: ""
+};
