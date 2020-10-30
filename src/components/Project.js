@@ -1,4 +1,7 @@
-function Project(){
+function Project(props){
+
+  const { hobby } = props;
+
     return (
         <a class="js-editable-target editable project-cover js-project-cover-touch hold-space"
               href="awesome-ios-ui-kit.html" data-context="pages"
@@ -8,7 +11,7 @@ function Project(){
                   <div class="cover-image">
                     <div class="cover cover-normal">
                     <img class="cover__img js-lazy"
-                        src="https://play-lh.googleusercontent.com/uRharscO-5WJ7LZzhaqUzHZZmuVcIyvsvFMzmGIEoGGxL9P2TQxERg_Jsq-TYGdV9VJ9=w1875-h985-rw">
+                        src={ hobby.thumbnailUrl }>
                     </img>
                     </div>
                   </div>
@@ -16,8 +19,8 @@ function Project(){
                 <div class="details-wrap">
                   <div class="details">
                     <div class="details-inner">
-                      <div class="title preserve-whitespace">Awesome iOS UI Kit</div>
-                      <div class="custom2 preserve-whitespace">UI/UX, Mobile Design, UI Kit, My Product</div>
+                      <div class="title" style={{ fontFamily: 'Google Sans' }}> { hobby.hobbyName } </div>
+                      <div class="custom2" style={{ fontFamily: 'Forum, cursive' }}> {hobby.description} </div>
                     </div>
                   </div>
                 </div>
