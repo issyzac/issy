@@ -61,9 +61,9 @@ function Footer(){
                 </li>
               </ul> */}
             </div>
-            <div class="footer-text">
-              <h1><a href="mailto:hello@robertlicau.com">hello@robertlicau.com</a></h1>© 2018 Robert Licau, All rights
-              reserved
+            <div class="footer-text" style = {{ fontFamily: 'Forum, cursive' }}>
+              <h1><a href="mailto:issyzac.iz@gmail.com" style={{ fontFamily: 'Forum, cursive' }}>habari@isayamollel.com</a></h1>
+              © 2020 Isaya Mollel, All rights reserved
             </div>
           </footer>
     );
