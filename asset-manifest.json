@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/issy/static/css/main.ab7136cd.chunk.css",
-    "main.js": "/issy/static/js/main.7a98c9fe.chunk.js",
-    "main.js.map": "/issy/static/js/main.7a98c9fe.chunk.js.map",
-    "runtime-main.js": "/issy/static/js/runtime-main.6ee997f1.js",
-    "runtime-main.js.map": "/issy/static/js/runtime-main.6ee997f1.js.map",
-    "static/js/2.00022cc8.chunk.js": "/issy/static/js/2.00022cc8.chunk.js",
-    "static/js/2.00022cc8.chunk.js.map": "/issy/static/js/2.00022cc8.chunk.js.map",
-    "static/js/3.f319ee82.chunk.js": "/issy/static/js/3.f319ee82.chunk.js",
-    "static/js/3.f319ee82.chunk.js.map": "/issy/static/js/3.f319ee82.chunk.js.map",
-    "index.html": "/issy/index.html",
-    "static/css/main.ab7136cd.chunk.css.map": "/issy/static/css/main.ab7136cd.chunk.css.map",
-    "static/js/2.00022cc8.chunk.js.LICENSE.txt": "/issy/static/js/2.00022cc8.chunk.js.LICENSE.txt",
-    "static/media/back_to_top.603bdb09.svg": "/issy/static/media/back_to_top.603bdb09.svg",
-    "static/media/logo.103b5fa1.svg": "/issy/static/media/logo.103b5fa1.svg"
+    "main.css": "/isayamollel.com/static/css/main.ab7136cd.chunk.css",
+    "main.js": "/isayamollel.com/static/js/main.7a98c9fe.chunk.js",
+    "main.js.map": "/isayamollel.com/static/js/main.7a98c9fe.chunk.js.map",
+    "runtime-main.js": "/isayamollel.com/static/js/runtime-main.6f845344.js",
+    "runtime-main.js.map": "/isayamollel.com/static/js/runtime-main.6f845344.js.map",
+    "static/js/2.00022cc8.chunk.js": "/isayamollel.com/static/js/2.00022cc8.chunk.js",
+    "static/js/2.00022cc8.chunk.js.map": "/isayamollel.com/static/js/2.00022cc8.chunk.js.map",
+    "static/js/3.f319ee82.chunk.js": "/isayamollel.com/static/js/3.f319ee82.chunk.js",
+    "static/js/3.f319ee82.chunk.js.map": "/isayamollel.com/static/js/3.f319ee82.chunk.js.map",
+    "index.html": "/isayamollel.com/index.html",
+    "static/css/main.ab7136cd.chunk.css.map": "/isayamollel.com/static/css/main.ab7136cd.chunk.css.map",
+    "static/js/2.00022cc8.chunk.js.LICENSE.txt": "/isayamollel.com/static/js/2.00022cc8.chunk.js.LICENSE.txt",
+    "static/media/back_to_top.603bdb09.svg": "/isayamollel.com/static/media/back_to_top.603bdb09.svg",
+    "static/media/logo.103b5fa1.svg": "/isayamollel.com/static/media/logo.103b5fa1.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6ee997f1.js",
+    "static/js/runtime-main.6f845344.js",
     "static/js/2.00022cc8.chunk.js",
     "static/css/main.ab7136cd.chunk.css",
     "static/js/main.7a98c9fe.chunk.js"
