@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"e7fb1b89a0",applicationID:"750147145"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name=keywords  content="Adobe Portfolio" />
+      <meta name=description  content="Den of Imagination Studio offers miniature painting, assembling and sculpting services for very popular game Warhammer 40000." />
+      <meta name=twitter:card  content="summary_large_image" />
+      <meta name=twitter:site  content="@AdobePortfolio" />
+      <meta  property=og:title content="Robert Licau • UI/UX Designer and Entrepreneur - Den of Imagination Studio" />
+      <meta  property=og:description content="Den of Imagination Studio offers miniature painting, assembling and sculpting services for very popular game Warhammer 40000." />
+      <meta  property=og:image content="https://pro2-bar-s3-cdn-cf1.myportfolio.com/ac05157db7a7732302b941275878c68b/ccd63a21-6353-4d4e-a9b6-12edd55827ab_rwc_0x0x772x605x772.jpg?h=ff3277f447791d1bc864663b13b24c20" />
+        <link rel="icon" href="https://pro2-bar-s3-cdn-cf6.myportfolio.com/ac05157db7a7732302b941275878c68b/715b5fa9-9e57-4dc7-b02c-0185f111b02d_carw_1x1x32.png?h=d4cfe32395930636740cf11edd7cc05b" />
+      <link rel="stylesheet" href="dist/css/main.css" type="text/css" />
+      <link rel="stylesheet" href="https://pro2-bar-s3-cdn-cf6.myportfolio.com/ac05157db7a7732302b941275878c68b/ac37a0de3e5d17a5f9417fd08b11eac81574116020.css?h=707a38660ec9f410e6b7c563be30a4b3" type="text/css" />
+    <link rel="canonical" href="website-for-den-of-imagination-studio.html" />
+      <title>Robert Licau • UI/UX Designer and Entrepreneur - Den of Imagination Studio</title>
+    <script type="text/javascript" src="https://use.typekit.net/ik/_-WMmTtAEkPRv2sqiMNzI66IwYm0d8yIdGxIV-h4zKjfenjffHYEBsJzwD9oFDIDWh4KFRmqjhBcjDi8jR8KFRMoFcwUZ28KZRsyF26ojDqtjAboZAbajDw-RbI7OcuoSeNkieZzde8zOcFzdP37O1gkdDJlic88ikolpWgzS1scdhUTdkoRdhXCHKokdh48S1sC-AFyiPoRdhXCdW83da4XZcNC-Av0jhNlOYgkdDJlic88ikolpWgzS1scdhUTdkoRdhXCScNKZW4Xde8RjW90jhNlOYiaikokdh48S1sC-AFyiPoRdhXKgeilShGKgYsDjaqKgYZRShX7fbRs2UMMeMS6MKG4fFZlIMIjgPMfH6qJXcXbMs6YJMJ7fbRKHyMfeMw6MKG4fHvgIMJjgfMfH6qJnbIbMy6eJMJ7fbKOMsMfeMS6MKG4fHqgIMJjffMfqMehlJD7gb.js?cb=c39e815b85178010fb1aa1abdd329ebdfdfd193a" async onload="
+    try {
+      window.Typekit.load();
+    } catch (e) {
+      console.warn('Typekit not loaded.');
+    }
+    "></script>
+</head>
+        <body class="transition-enabled">  <div class='page-background-video '>
+  </div>
+  <div class="js-responsive-nav">
+    <div class="responsive-nav">
+      <div class="close-responsive-click-area js-close-responsive-nav">
+        <div class="close-responsive-button"></div>
+      </div>
+          <div class="nav-container">
+            <nav class="js-editable-target editable">
+                <div class="gallery-title"><a href="works.html" >Works</a></div>
+      <div class="page-title">
+        <a href="about.html" >About</a>
+      </div>
+      <div class="page-title">
+        <a href="contact.html" >Contact</a>
+      </div>
+            </nav>
+          </div>
+    </div>
+  </div>
+  <div class="site-wrap cfix">
+    <div class="site-container">
+      <div class="site-content">
+        <header class="site-header">
+          <div class="logo-container">
+              <div class="logo-wrap js-editable-target editable">
+                    <div class="logo logo-image has-rollover ">
+    <a href="works.html" class="image-normal image-link">
+      <img src="https://pro2-bar-s3-cdn-cf4.myportfolio.com/ac05157db7a7732302b941275878c68b/57117200-c9e3-41ef-8c56-1cfad47c13fa_rwc_0x0x128x128x4096.png?h=af96f62639b46477c5ef36308ff2117d" alt="Robert Licau">
+    </a>
+    <a href="works.html" class="image-rollover image-link">
+      <img src="https://pro2-bar-s3-cdn-cf6.myportfolio.com/ac05157db7a7732302b941275878c68b/7194b706-a166-496e-bef1-bdb4c16a9881_rwc_0x0x128x128x4096.png?h=670ce358c1bf73a7f1c0c7ce91b467fc" alt="Robert Licau">
+    </a>
+</div>
+              </div>
+  <div class="hamburger-click-area js-hamburger">
+    <div class="hamburger">
+      <i></i>
+      <i></i>
+      <i></i>
+    </div>
+  </div>
+          </div>
+              <div class="nav-container">
+                <nav class="js-editable-target editable">
+                <div class="gallery-title"><a href="works.html" >Works</a></div>
+      <div class="page-title">
+        <a href="about.html" >About</a>
+      </div>
+      <div class="page-title">
+        <a href="contact.html" >Contact</a>
+      </div>
+                </nav>
+              </div>
+        </header>
+        <main>
+              <div class="masthead js-editable-target editable" data-context="page.masthead">
+                <div class="masthead-contents">
+                  <div class="masthead-text js-masthead-text">
+                    <div class="js-editable-target editable" data-context="page.masthead"><h1 decorator="inlineTextEditable" contenteditable="false" class="js-inline-text-editable preserve-whitespace main-text rich-text module-text" data-text-keypath="customizations.masthead.title.text" value="Den of Imagination Studio">Den of Imagination Studio</h1></div>
+                    <div class="js-editable-target editable" data-context="page.masthead"><p decorator="inlineTextEditable" contenteditable="false" class="js-inline-text-editable preserve-whitespace main-text rich-text module-text" data-text-keypath="page.masthead.text.text" value="UI/UX, Web Design, Interaction Design, Consulting">UI/UX, Web Design, Interaction Design, Consulting</p></div>
+                    <div class="masthead-buttons">
+                      <a href="http://www.denofimagination.com/" target="_blank" class="masthead-button masthead-button-1 js-editable-target editable preserve-whitespace--nowrap" data-context="page.masthead">See it live</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  <div class="page-container js-site-wrap js-editable-target editable" data-context="page.page.container">
+    <section class="page standard-modules">
+      <div class="page-content js-page-content js-editable-target editable" data-context="pages" data-identity="id:p581637f01df126ad1dafb3c9dcd0698aa98c192034dd00d96ce47" data-menu="Page Content">
+        <div id="project-canvas" class="js-project-modules modules content">
+          <div id="project-modules">
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align-center editable js-editable js-project-module" style="  padding-top: 40px;
+  padding-bottom: 40px;
+">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:left;" class="sub-title"><span style="font-family:vcsm; font-weight:600;">About</span></div><div>Den of Imagination Studio offers miniature painting, assembling and sculpting services for very popular game Warhammer 40000. Goal of that cooperation was to redesign the old website with a fresh new look and usability in mind. The new website helped in increasing the number of new clients and accelerating the growth of the company. </div><div><br></div><div>• Development planning and design for new website; using Agile Project Management<br>• UI/UX interface design, responsive web design of new website</div><div><br></div><div><div style="text-align:left;" class="main-text"><span style="font-family:vcsm; font-weight:600;"><span style="font-size:22px;">Client</span></span></div><div style="text-align:left;" class="main-text"><span style="font-size:22px;"><a href="http://www.denofimagination.com/" target="_blank">Den Of Imagination Studio</a></span></div></div><div style="text-align:left;" class="caption"><br></div><div style="text-align:left;" class="main-text"><span style="font-family:vcsm; font-weight:600;"><span style="font-size:22px;">Role</span></span></div><div style="text-align:left;" class="caption"><span style="color:#848484;" class="texteditor-inline-color"><span style="font-size:18px;" class="texteditor-inline-fontsize">Head of Product Design, UI/UX Designer, Project Manager</span></span></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              <div class="project-module module image project-module-image editable js-editable js-project-module"  style="  padding-top: 0px;
+  padding-bottom: 0px;
+">
+
+  
+ 
+  
+     <div class="js-lightbox" data-src="https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/b28a5c5f482076bf86fdf38b.jpg?h=26f2e0748c6728cdfd016cf782785767">
+           <img
+             class="js-lazy"
+             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+             data-src="https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/b28a5c5f482076bf86fdf38b_rw_1920.jpg?h=97c38bb0959d7fa5d1c2f6fcf0d5535c"
+             data-srcset="https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/b28a5c5f482076bf86fdf38b_rw_600.jpg?h=69fde2010fa44bb625c57f45fe1120ba 600w,https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/b28a5c5f482076bf86fdf38b_rw_1200.jpg?h=beddbed323b0da1685a345ae929f4260 1200w,https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/b28a5c5f482076bf86fdf38b_rw_1920.jpg?h=97c38bb0959d7fa5d1c2f6fcf0d5535c 1600w,"
+             data-sizes="(max-width: 1600px) 100vw, 1600px"
+             width="1600"
+             height="0"
+             style="padding-bottom: 227.67%; background: rgba(0, 0, 0, 0.03)"
+             
+           >
+     </div>
+  
+
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+          </div>
+        </div>
+      </div>
+    </section>
+          <section class="other-projects js-editable-target editable" data-context="page.page.other_pages">
+            <div class="title-wrapper">
+              <div class="title-container">
+                  <h3 class="other-projects-title preserve-whitespace">You may also like</h3>
+              </div>
+            </div>
+            <div class="project-covers">
+                  <a class="js-editable-target editable project-cover js-project-cover-touch hold-space" href="vegetarian-shop-website.html" data-context="pages" data-identity="id:p5816367fc25da25919df6ef84318929fb10792cd5612af96cfefd" data-menu="Page Content">
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/14d7aa39-3845-4e08-b1e2-d2469d8a9968_rwc_16x0x769x603x32.jpg?h=db615c4a3ad2db87354b856c9e36dd6a"
+              data-src="https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/14d7aa39-3845-4e08-b1e2-d2469d8a9968_rwc_16x0x769x603x769.jpg?h=7d10061e9363c1342af31581cd643785"
+              data-srcset="https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/14d7aa39-3845-4e08-b1e2-d2469d8a9968_rwc_16x0x769x603x640.jpg?h=e87abb510a6589846082b2f5007f411c 640w, https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/14d7aa39-3845-4e08-b1e2-d2469d8a9968_rwc_16x0x769x603x769.jpg?h=7d10061e9363c1342af31581cd643785 1280w, https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/14d7aa39-3845-4e08-b1e2-d2469d8a9968_rwc_16x0x769x603x769.jpg?h=7d10061e9363c1342af31581cd643785 1366w, https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/14d7aa39-3845-4e08-b1e2-d2469d8a9968_rwc_16x0x769x603x769.jpg?h=7d10061e9363c1342af31581cd643785 1920w, https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/14d7aa39-3845-4e08-b1e2-d2469d8a9968_rwc_16x0x769x603x769.jpg?h=7d10061e9363c1342af31581cd643785 2560w, https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/14d7aa39-3845-4e08-b1e2-d2469d8a9968_rwc_16x0x769x603x769.jpg?h=7d10061e9363c1342af31581cd643785 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1280px / 4)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">Vegetarian Shop</div>
+                              <div class="custom2 preserve-whitespace">UI/UX, Web Design, Interaction Design, Concept</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="js-editable-target editable project-cover js-project-cover-touch hold-space" href="mbox-music-app-for-ios.html" data-context="pages" data-identity="id:p581f4feb544cd8d606533ef199acad75f85fa2b7429b8569633d2" data-menu="Page Content">
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/e001b8e7-f045-4aa6-9a7d-bbbb46ea222f_rwc_16x0x769x603x32.jpg?h=36875c9db7d10fa6d2972ba09b2181aa"
+              data-src="https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/e001b8e7-f045-4aa6-9a7d-bbbb46ea222f_rwc_16x0x769x603x769.jpg?h=8f85bbb6eb58d0d7949ea1dd6173cfa5"
+              data-srcset="https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/e001b8e7-f045-4aa6-9a7d-bbbb46ea222f_rwc_16x0x769x603x640.jpg?h=80f38e33651468aa356f62c2d039b180 640w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/e001b8e7-f045-4aa6-9a7d-bbbb46ea222f_rwc_16x0x769x603x769.jpg?h=8f85bbb6eb58d0d7949ea1dd6173cfa5 1280w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/e001b8e7-f045-4aa6-9a7d-bbbb46ea222f_rwc_16x0x769x603x769.jpg?h=8f85bbb6eb58d0d7949ea1dd6173cfa5 1366w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/e001b8e7-f045-4aa6-9a7d-bbbb46ea222f_rwc_16x0x769x603x769.jpg?h=8f85bbb6eb58d0d7949ea1dd6173cfa5 1920w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/e001b8e7-f045-4aa6-9a7d-bbbb46ea222f_rwc_16x0x769x603x769.jpg?h=8f85bbb6eb58d0d7949ea1dd6173cfa5 2560w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/e001b8e7-f045-4aa6-9a7d-bbbb46ea222f_rwc_16x0x769x603x769.jpg?h=8f85bbb6eb58d0d7949ea1dd6173cfa5 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1280px / 4)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">MBOX - Music iOS App</div>
+                              <div class="custom2 preserve-whitespace">UI/UX, Mobile Design, iOS, Interaction Design, Concept</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="js-editable-target editable project-cover js-project-cover-touch hold-space" href="transformative-economics-com.html" data-context="pages" data-identity="id:p5963be750417994da5f0e543955c78e90dcd970b49ff79847cd74" data-menu="Page Content">
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/84a08aac-6463-481a-8b4f-6228c13bb97f_rwc_16x0x769x603x32.png?h=1ad7a99b85e63fb7a4f878ad9db5a1fd"
+              data-src="https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/84a08aac-6463-481a-8b4f-6228c13bb97f_rwc_16x0x769x603x769.png?h=bb74bb3818f51c39f8ec43e2097b0c36"
+              data-srcset="https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/84a08aac-6463-481a-8b4f-6228c13bb97f_rwc_16x0x769x603x640.png?h=6af3990a0cf1fe8a9971e2ecabe516e5 640w, https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/84a08aac-6463-481a-8b4f-6228c13bb97f_rwc_16x0x769x603x769.png?h=bb74bb3818f51c39f8ec43e2097b0c36 1280w, https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/84a08aac-6463-481a-8b4f-6228c13bb97f_rwc_16x0x769x603x769.png?h=bb74bb3818f51c39f8ec43e2097b0c36 1366w, https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/84a08aac-6463-481a-8b4f-6228c13bb97f_rwc_16x0x769x603x769.png?h=bb74bb3818f51c39f8ec43e2097b0c36 1920w, https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/84a08aac-6463-481a-8b4f-6228c13bb97f_rwc_16x0x769x603x769.png?h=bb74bb3818f51c39f8ec43e2097b0c36 2560w, https://pro2-bar-s3-cdn-cf.myportfolio.com/ac05157db7a7732302b941275878c68b/84a08aac-6463-481a-8b4f-6228c13bb97f_rwc_16x0x769x603x769.png?h=bb74bb3818f51c39f8ec43e2097b0c36 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1280px / 4)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">Transformative Economics Inc.</div>
+                              <div class="custom2 preserve-whitespace">UI/UX, Web Design, Responsive Web Design</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="js-editable-target editable project-cover js-project-cover-touch hold-space" href="awesome-ios-ui-kit.html" data-context="pages" data-identity="id:p5acdd0120aabd202770ce9f8d28a0bbc08784c034a7bc5e17e0e8" data-menu="Page Content">
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/e4c7e566-baf9-4dfd-bebe-732a831af104_rwc_16x0x766x599x32.png?h=38e0bda9e69967fa7dc095566c385e88"
+              data-src="https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/e4c7e566-baf9-4dfd-bebe-732a831af104_rwc_16x0x766x599x766.png?h=019480ec4926b2f284e69d1b54972e18"
+              data-srcset="https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/e4c7e566-baf9-4dfd-bebe-732a831af104_rwc_16x0x766x599x640.png?h=098e1b66b68145f5d7a4e28fc1af812b 640w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/e4c7e566-baf9-4dfd-bebe-732a831af104_rwc_16x0x766x599x766.png?h=019480ec4926b2f284e69d1b54972e18 1280w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/e4c7e566-baf9-4dfd-bebe-732a831af104_rwc_16x0x766x599x766.png?h=019480ec4926b2f284e69d1b54972e18 1366w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/e4c7e566-baf9-4dfd-bebe-732a831af104_rwc_16x0x766x599x766.png?h=019480ec4926b2f284e69d1b54972e18 1920w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/e4c7e566-baf9-4dfd-bebe-732a831af104_rwc_16x0x766x599x766.png?h=019480ec4926b2f284e69d1b54972e18 2560w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/e4c7e566-baf9-4dfd-bebe-732a831af104_rwc_16x0x766x599x766.png?h=019480ec4926b2f284e69d1b54972e18 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1280px / 4)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">Awesome iOS UI Kit</div>
+                              <div class="custom2 preserve-whitespace">UI/UX, Mobile Design, UI Kit, My Product</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="js-editable-target editable project-cover js-project-cover-touch hold-space" href="save-nuts-website.html" data-context="pages" data-identity="id:p5816685fac73c0a6fa845c3e85141b1c0ca086a91aaec5408f700" data-menu="Page Content">
+                    <div class="cover-content-container">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/4c3526ed-0eb5-4627-90cb-b118e21f5c6d_rwc_16x0x769x603x32.jpg?h=fe046109425bb9c14b4cf003d30cd60b"
+              data-src="https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/4c3526ed-0eb5-4627-90cb-b118e21f5c6d_rwc_16x0x769x603x769.jpg?h=076f389aa74fd8c0bb6cfea2a991ca13"
+              data-srcset="https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/4c3526ed-0eb5-4627-90cb-b118e21f5c6d_rwc_16x0x769x603x640.jpg?h=7cf5567f2cf1ba99d13262492fee0712 640w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/4c3526ed-0eb5-4627-90cb-b118e21f5c6d_rwc_16x0x769x603x769.jpg?h=076f389aa74fd8c0bb6cfea2a991ca13 1280w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/4c3526ed-0eb5-4627-90cb-b118e21f5c6d_rwc_16x0x769x603x769.jpg?h=076f389aa74fd8c0bb6cfea2a991ca13 1366w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/4c3526ed-0eb5-4627-90cb-b118e21f5c6d_rwc_16x0x769x603x769.jpg?h=076f389aa74fd8c0bb6cfea2a991ca13 1920w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/4c3526ed-0eb5-4627-90cb-b118e21f5c6d_rwc_16x0x769x603x769.jpg?h=076f389aa74fd8c0bb6cfea2a991ca13 2560w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/ac05157db7a7732302b941275878c68b/4c3526ed-0eb5-4627-90cb-b118e21f5c6d_rwc_16x0x769x603x769.jpg?h=076f389aa74fd8c0bb6cfea2a991ca13 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1280px / 4)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                      <div class="details-wrap">
+                        <div class="details">
+                          <div class="details-inner">
+                              <div class="title preserve-whitespace">SaveNuts.com</div>
+                              <div class="custom2 preserve-whitespace">UI/UX, Web Design, Mobile Design, Responsive Web Design, My own Product</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+            </div>
+          </section>
+        <section class="back-to-top js-editable-target editable">
+          <a href="website-for-den-of-imagination-studio.html#"><span class="arrow">&uarr;</span><span class="preserve-whitespace">Back to Top</span></a>
+        </section>
+        <a class="back-to-top-fixed js-editable-target editable js-back-to-top " href="website-for-den-of-imagination-studio.html#">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 26 26" style="enable-background:new 0 0 26 26;" xml:space="preserve" class="icon icon-back-to-top">
+          <g>
+            <path d="M13.8,1.3L21.6,9c0.1,0.1,0.1,0.3,0.2,0.4c0.1,0.1,0.1,0.3,0.1,0.4s0,0.3-0.1,0.4c-0.1,0.1-0.1,0.3-0.3,0.4
+              c-0.1,0.1-0.2,0.2-0.4,0.3c-0.2,0.1-0.3,0.1-0.4,0.1c-0.1,0-0.3,0-0.4-0.1c-0.2-0.1-0.3-0.2-0.4-0.3L14.2,5l0,19.1
+              c0,0.2-0.1,0.3-0.1,0.5c0,0.1-0.1,0.3-0.3,0.4c-0.1,0.1-0.2,0.2-0.4,0.3c-0.1,0.1-0.3,0.1-0.5,0.1c-0.1,0-0.3,0-0.4-0.1
+              c-0.1-0.1-0.3-0.1-0.4-0.3c-0.1-0.1-0.2-0.2-0.3-0.4c-0.1-0.1-0.1-0.3-0.1-0.5l0-19.1l-5.7,5.7C6,10.8,5.8,10.9,5.7,11
+              c-0.1,0.1-0.3,0.1-0.4,0.1c-0.2,0-0.3,0-0.4-0.1c-0.1-0.1-0.3-0.2-0.4-0.3c-0.1-0.1-0.1-0.2-0.2-0.4C4.1,10.2,4,10.1,4.1,9.9
+              c0-0.1,0-0.3,0.1-0.4c0-0.1,0.1-0.3,0.3-0.4l7.7-7.8c0.1,0,0.2-0.1,0.2-0.1c0,0,0.1-0.1,0.2-0.1c0.1,0,0.2,0,0.2-0.1
+              c0.1,0,0.1,0,0.2,0c0,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0.1c0.1,0,0.1,0.1,0.2,0.1C13.7,1.2,13.8,1.2,13.8,1.3z"/>
+          </g>
+          </svg>
+        </a>
+  </div>
+              <footer class="site-footer js-editable-target editable">
+                  <div class="social pf-footer-social">
+                    <ul>
+                            <li>
+                              <a href="https://twitter.com/RobertLicau" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 30 24" xml:space="preserve" class="icon"><path d="M24.71 5.89C24 6.2 23.2 6.4 22.4 6.53c0.82-0.5 1.45-1.29 1.75-2.23c-0.77 0.46-1.62 0.8-2.53 1 C20.92 4.5 19.9 4 18.7 4c-2.2 0-3.99 1.81-3.99 4.04c0 0.3 0 0.6 0.1 0.92C11.54 8.8 8.6 7.2 6.6 4.7 C6.3 5.3 6.1 6 6.1 6.77c0 1.4 0.7 2.6 1.8 3.36c-0.65-0.02-1.27-0.2-1.81-0.51c0 0 0 0 0 0.1 c0 2 1.4 3.6 3.2 3.96c-0.34 0.09-0.69 0.14-1.05 0.14c-0.26 0-0.51-0.03-0.75-0.07c0.51 1.6 2 2.8 3.7 2.8 c-1.36 1.08-3.08 1.73-4.95 1.73c-0.32 0-0.64-0.02-0.95-0.06C7.05 19.3 9.1 20 11.4 20c7.33 0 11.34-6.15 11.34-11.49 c0-0.18 0-0.35-0.01-0.52C23.5 7.4 24.2 6.7 24.7 5.89z"/></svg>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://www.behance.net/Robert-Licau" target="_blank">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 24" class="icon"><path id="path-1" d="M18.83,14.38a2.78,2.78,0,0,0,.65,1.9,2.31,2.31,0,0,0,1.7.59,2.31,2.31,0,0,0,1.38-.41,1.79,1.79,0,0,0,.71-0.87h2.31a4.48,4.48,0,0,1-1.71,2.53,5,5,0,0,1-2.78.76,5.53,5.53,0,0,1-2-.37,4.34,4.34,0,0,1-1.55-1,4.77,4.77,0,0,1-1-1.63,6.29,6.29,0,0,1,0-4.13,4.83,4.83,0,0,1,1-1.64A4.64,4.64,0,0,1,19.09,9a4.86,4.86,0,0,1,2-.4A4.5,4.5,0,0,1,23.21,9a4.36,4.36,0,0,1,1.5,1.3,5.39,5.39,0,0,1,.84,1.86,7,7,0,0,1,.18,2.18h-6.9Zm3.67-3.24A1.94,1.94,0,0,0,21,10.6a2.26,2.26,0,0,0-1,.22,2,2,0,0,0-.66.54,1.94,1.94,0,0,0-.35.69,3.47,3.47,0,0,0-.12.65h4.29A2.75,2.75,0,0,0,22.5,11.14ZM18.29,6h5.36V7.35H18.29V6ZM13.89,17.7a4.4,4.4,0,0,1-1.51.7,6.44,6.44,0,0,1-1.73.22H4.24V5.12h6.24a7.7,7.7,0,0,1,1.73.17,3.67,3.67,0,0,1,1.33.56,2.6,2.6,0,0,1,.86,1,3.74,3.74,0,0,1,.3,1.58,3,3,0,0,1-.46,1.7,3.33,3.33,0,0,1-1.35,1.12,3.19,3.19,0,0,1,1.82,1.26,3.79,3.79,0,0,1,.59,2.17,3.79,3.79,0,0,1-.39,1.77A3.24,3.24,0,0,1,13.89,17.7ZM11.72,8.19a1.25,1.25,0,0,0-.45-0.47,1.88,1.88,0,0,0-.64-0.24,5.5,5.5,0,0,0-.76-0.05H7.16v3.16h3a2,2,0,0,0,1.28-.38A1.43,1.43,0,0,0,11.89,9,1.73,1.73,0,0,0,11.72,8.19ZM11.84,13a2.39,2.39,0,0,0-1.52-.45H7.16v3.73h3.11a3.61,3.61,0,0,0,.82-0.09A2,2,0,0,0,11.77,16a1.39,1.39,0,0,0,.47-0.54,1.85,1.85,0,0,0,.17-0.88A1.77,1.77,0,0,0,11.84,13Z"/></svg>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://www.linkedin.com/in/robertlicau" target="_blank">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 24" style="enable-background:new 0 0 30 24;" xml:space="preserve" class="icon">
+                                <path id="path-1_24_" d="M19.6,19v-5.8c0-1.4-0.5-2.4-1.7-2.4c-1,0-1.5,0.7-1.8,1.3C16,12.3,16,12.6,16,13v6h-3.4
+                                  c0,0,0.1-9.8,0-10.8H16v1.5c0,0,0,0,0,0h0v0C16.4,9,17.2,7.9,19,7.9c2.3,0,4,1.5,4,4.9V19H19.6z M8.9,6.7L8.9,6.7
+                                  C7.7,6.7,7,5.9,7,4.9C7,3.8,7.8,3,8.9,3s1.9,0.8,1.9,1.9C10.9,5.9,10.1,6.7,8.9,6.7z M10.6,19H7.2V8.2h3.4V19z"/>
+                                </svg>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://dribbble.com/RobertLicau" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 30 24" xml:space="preserve" class="icon"><path d="M15 20c-4.41 0-8-3.59-8-8s3.59-8 8-8c4.41 0 8 3.6 8 8S19.41 20 15 20L15 20z M21.75 13.1 c-0.23-0.07-2.12-0.64-4.26-0.29c0.89 2.5 1.3 4.5 1.3 4.87C20.35 16.6 21.4 15 21.8 13.1L21.75 13.1z M17.67 18.3 c-0.1-0.6-0.5-2.69-1.46-5.18c-0.02 0-0.03 0.01-0.05 0.01c-3.85 1.34-5.24 4.02-5.36 4.27c1.16 0.9 2.6 1.4 4.2 1.4 C15.95 18.8 16.9 18.6 17.7 18.3L17.67 18.3z M9.92 16.58c0.15-0.27 2.03-3.37 5.55-4.51c0.09-0.03 0.18-0.06 0.27-0.08 c-0.17-0.39-0.36-0.78-0.55-1.16c-3.41 1.02-6.72 0.98-7.02 0.97c0 0.1 0 0.1 0 0.21C8.17 13.8 8.8 15.4 9.9 16.58L9.92 16.6 z M8.31 10.61c0.31 0 3.1 0 6.32-0.83c-1.13-2.01-2.35-3.7-2.53-3.95C10.18 6.7 8.8 8.5 8.3 10.61L8.31 10.61z M13.4 5.4 c0.19 0.2 1.4 1.9 2.5 4c2.43-0.91 3.46-2.29 3.58-2.47C18.32 5.8 16.7 5.2 15 5.18C14.45 5.2 13.9 5.2 13.4 5.4 L13.4 5.37z M20.29 7.69c-0.14 0.19-1.29 1.66-3.82 2.69c0.16 0.3 0.3 0.7 0.5 0.99c0.05 0.1 0.1 0.2 0.1 0.3 c2.27-0.29 4.5 0.2 4.8 0.22C21.82 10.3 21.2 8.8 20.3 7.69L20.29 7.69z"/></svg>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://medium.com/@RobertLicau" target="_blank">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 24" style="enable-background:new 0 0 30 24;" xml:space="preserve" class="icon">
+                                <g>
+                                  <path class="st0" d="M23.5,7.4C23.5,7.4,23.5,7.4,23.5,7.4L23.5,7.4l-5.2-2.6c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1,0
+                                    c-0.2,0-0.4,0.1-0.5,0.3l-3,4.8l3.7,6.1L23.5,7.4C23.5,7.5,23.5,7.4,23.5,7.4z"/>
+                                  <polygon class="st0" points="13,8.8 13,14.3 17.9,16.7   "/>
+                                  <path class="st0" d="M18.6,17.1l4,2c0.5,0.3,0.9,0.1,0.9-0.4V9L18.6,17.1z"/>
+                                  <path class="st0" d="M12.1,7.4l-5-2.5C7,4.9,6.9,4.8,6.8,4.8C6.6,4.8,6.4,5,6.4,5.3v10.9c0,0.3,0.2,0.6,0.5,0.8l4.4,2.2
+                                    c0.1,0.1,0.2,0.1,0.3,0.1c0.3,0,0.5-0.2,0.5-0.6L12.1,7.4C12.1,7.5,12.1,7.4,12.1,7.4z"/>
+                                </g>
+                                </svg>
+                              </a>
+                            </li>
+                    </ul>
+                  </div>
+                <div class="footer-text">
+                  <h1><a href="mailto:hello@robertlicau.com">hello@robertlicau.com</a></h1>© 2018 Robert Licau, All rights reserved
+                </div>
+              </footer>
+        </main>
+      </div>
+    </div>
+  </div>
+<div class="cookie-banner js-cookie-banner">
+  <p>RobertLicau.com uses cookies to make the site simpler. <a class="consent-link" href="website-for-den-of-imagination-studio.html#">Accept</a></p>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-6458 -2604 16 16" class='close-btn'>
+    <g id="Group_1479" data-name="Group 1479" transform="translate(-8281.367 -3556.368)">
+      <rect id="Rectangle_6401" data-name="Rectangle 6401" class="stroke" width="1.968" height="20.66" transform="translate(1823.367 953.759) rotate(-45)"/>
+      <rect id="Rectangle_6402" data-name="Rectangle 6402" class="stroke" width="1.968" height="20.66" transform="translate(1824.758 968.368) rotate(-135)"/>
+    </g>
+  </svg>
+</div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"e7fb1b89a0","applicationID":"750147145","transactionName":"ZwZaYkJVDERXUxULCV5Me0NDQA1aGWsmJzJtQxdtS0QDQ14KT0gbbQ==","queueTime":0,"applicationTime":10,"atts":"S0FNFApPHxsUUUNYHU0e","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+<script type="text/javascript">
+  // fix for Safari's back/forward cache
+  window.onpageshow = function(e) {
+    if (e.persisted) { window.location.reload(); }
+  };
+</script>
+  <script type="text/javascript">var __config__ = {"page_id":"p581637f01df126ad1dafb3c9dcd0698aa98c192034dd00d96ce47","theme":{"name":"geometric"},"pageTransition":true,"linkTransition":true,"disableDownload":true,"localizedValidationMessages":{"required":"This field is required","Email":"This field must be a valid email address"},"lightbox":{"enabled":false},"cookie_banner":{"enabled":true,"color":{"text":"#1c1c1c","bg":"#f7f7f7"}},"googleAnalytics":{"trackingCode":"UA-87496201-1","anonymization":false}};</script>
+  <script type="text/javascript" src="site/translations@cb=c39e815b85178010fb1aa1abdd329ebdfdfd193a"></script>
+  <script type="text/javascript" src="dist/js/main.js@cb=c39e815b85178010fb1aa1abdd329ebdfdfd193a"></script>
+</html>
