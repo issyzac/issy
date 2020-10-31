@@ -4,7 +4,7 @@ function Project(props){
 
     return (
         <a class="js-editable-target editable project-cover js-project-cover-touch hold-space"
-              href="awesome-ios-ui-kit.html" data-context="pages"
+              href="#" data-context="pages"
               data-identity="id:p5acdd0120aabd202770ce9f8d28a0bbc08784c034a7bc5e17e0e8">
               <div class="cover-content-container">
                 <div class="cover-image-wrap">
