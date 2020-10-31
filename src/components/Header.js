@@ -27,13 +27,15 @@ function PageHeader(){
             </div>
           </div>
           <div class="nav-container">
-            <nav class="js-editable-target editable">
-              <div class="gallery-title"><a href="works.html" class="active">Works</a></div>
-              <div class="page-title">
-                <a href="about.html">About</a>
+            <nav class="js-editable-target editable" style={{ fontFamily: "Google Sans" , color: "#202124" }}>
+              <div class="gallery-title">
+                <a href="works.html" class="active" style={{ fontFamily: "Google Sans" , color: "#202124" }}>Hi!</a>
               </div>
               <div class="page-title">
-                <a href="contact.html">Contact</a>
+                <a href="about.html" style={{ fontFamily: "Google Sans" , color: "#202124" }}>About</a>
+              </div>
+              <div class="page-title">
+                <a href="contact.html" style={{ fontFamily: "Google Sans" , color: "#202124" }} >Contact</a>
               </div>
             </nav>
           </div>
