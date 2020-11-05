@@ -1,0 +1,18 @@
+.masthead-button-1 {
+    background-color: #a4abb9;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: 'Google Sans';
+    font-style: normal;
+    font-weight: 300;
+    height: 80px;
+    line-height: 80px;
+    padding-left: 64px;
+    padding-right: 64px;
+}
+.masthead-button-1:hover {
+    background-color: #52555d;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 300; 
+}
