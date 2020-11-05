@@ -20,8 +20,9 @@ function TopDescription(){
                     Experience. I specialized in Mobile Technologies.</p>
                 </div>
                 <div className="masthead-buttons">
-                  <a href="contact.html" className="masthead-button masthead-button-1 preserve-whitespace--nowrap">Plan Your
-                    Project</a>
+                  <a href="contact.html" className="masthead-button masthead-button-1 preserve-whitespace--nowrap">
+                    What I do! <span class="ec ec-point-down"></span>
+                  </a>
                 </div>
               </div>
             </div>
