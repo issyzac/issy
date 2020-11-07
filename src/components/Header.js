@@ -10,7 +10,7 @@ function PageHeader(){
                 <span class="ec ec-grinning"></span>
                 </a>
                 <a href="#" class="image-rollover image-link">
-                <span class="ec ec-grinning"></span>
+                  <span class="ec ec-grinning"></span>
                 </a>
               </div>
             </div>
