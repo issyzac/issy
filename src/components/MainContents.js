@@ -8,7 +8,7 @@ function MainContents(){
         <main>
             <TopDescription />
             <section className="project-covers js-site-wrap js-editable-target editable" 
-                data-context="page.gallery.covers">
+                data-context="page.gallery.covers" id="whatIdo">
                { getHobbies() }
             </section>
             <BackToTop />
