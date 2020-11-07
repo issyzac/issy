@@ -10,7 +10,7 @@ function ResponsiveNav(){
             <div className="gallery-title">
                 <a href="works.html" className="active">Hi!</a>
             </div>
-            <div className="page-title">
+            <div className="page-title" >
                 <a href="about.html">About</a>
             </div>
             <div className="page-title">
