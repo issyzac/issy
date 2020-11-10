@@ -1,5 +1,7 @@
 import {ReactComponent as IssyLogo} from '../res/svg/logo.svg';
 
+import logo from '../res/images/logo.png';
+
 function PageHeader(){
     return (
         <header class="site-header">
@@ -7,10 +9,16 @@ function PageHeader(){
             <div class="logo-wrap js-editable-target editable">
               <div class="logo logo-image has-rollover ">
                 <a href="#" class="image-normal image-link">
-                <span class="ec ec-grinning"></span>
+                  <img
+                    src={logo}
+                    alt="Isaya Mollel">
+                  </img>
                 </a>
                 <a href="#" class="image-rollover image-link">
-                  <span class="ec ec-grinning"></span>
+                  <img
+                    src={logo}
+                    alt="Isaya Mollel">
+                  </img>
                 </a>
               </div>
             </div>
