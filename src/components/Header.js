@@ -1,6 +1,6 @@
 import {ReactComponent as IssyLogo} from '../res/svg/logo.svg';
 
-import logo from '../res/images/logo.png';
+import logo from '../res/images/issy_profile.png';
 
 function PageHeader(){
     return (
