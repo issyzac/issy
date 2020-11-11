@@ -61,8 +61,8 @@ function Footer(){
                 </li>
               </ul> */}
             </div>
-            <div class="footer-text" style = {{ fontFamily: 'Forum, cursive' }}>
-              <h1><a href="mailto:issyzac.iz@gmail.com" style={{ fontFamily: 'Forum, cursive' }}>habari@isayamollel.com</a></h1>
+            <div class="footer-text" style = {{ fontFamily: 'Google Sans' }}>
+              <h2><a href="mailto:issyzac.iz@gmail.com" style={{ fontFamily: 'Google Sans', color: '#414141' }}>habari@isayamollel.com</a></h2>
               © 2020 Isaya Mollel, All rights reserved
             </div>
           </footer>
