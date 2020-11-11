@@ -16,3 +16,11 @@
     font-style: normal;
     font-weight: 300; 
 }
+
+.logo-wrap {
+    max-width: 100%;
+    float: left;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    width: 25%;
+}
