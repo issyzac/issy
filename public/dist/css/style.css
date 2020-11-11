@@ -1,5 +1,5 @@
 .masthead-button-1 {
-    background-color: #a4abb9;
+    background-color: #52555d;
     border-radius: 10px;
     color: #ffffff;
     font-family: 'Google Sans';
@@ -11,7 +11,7 @@
     padding-right: 64px;
 }
 .masthead-button-1:hover {
-    background-color: #52555d;
+    background-color: #414141;
     color: #ffffff;
     font-style: normal;
     font-weight: 300; 
