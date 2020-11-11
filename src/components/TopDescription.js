@@ -16,7 +16,7 @@ function TopDescription(){
                     data-text-keypath="page.masthead.text.text"
                     value="My name is Isaya Mollel, I'm a Software Developer and Entrepreneur with more than 7+ years of
                     Experience. I specialized in Mobile Projects" style={{ fontFamily: 'Forum, cursive', color: "#202124" }}>
-                    Hi, I'm Isaya Mollel, a Software Developer and Entrepreneur with more than 7+ years of
+                    Hi, I'm Isaya Mollel, a Software Developer and Entrepreneur with more than 7 years of
                     Experience. I specialize in Mobile Technologies.</p>
                 </div>
                 <div className="masthead-buttons">
